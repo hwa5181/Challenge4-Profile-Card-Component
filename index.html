@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Card Component</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-cyan: hsl(185, 75%, 39%);
+            --dark-desaturated-blue: hsl(229, 23%, 23%);
+            --dark-gray: hsl(0, 0%, 59%);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+            background-position: -50vw -50vh, 50vw 50vh;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 100vw 100vh, 100vw 100vh;
+            background-color: var(--dark-cyan);
+        }
+
+        main {
+            width: calc(350/16*1rem);
+            min-height: 100vh;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        .profile-container {
+            display: flex;
+            position: relative;
+        }
+
+        .card-background {
+            width: inherit;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+
+        .pic-profile {
+            width: calc(150/16*1rem);
+            border: 0.5rem solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(100/16*1rem); /*(350px - 250px) / 2 */
+            top: 50%;
+        }
+
+        .details {
+            width: inherit;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 6rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .name {
+            color: var(--dark-desaturated-blue);
+            font-size: 1.5rem;
+            font-family: 'Kumbh Sans', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .age {
+            color: var(--dark-gray);
+            font-weight: 400;
+        }
+
+        .country {
+            font-family: 'Kumbh Sans', sans-serif;
+            color: var(--dark-gray);
+        }
+
+        .data-container {
+            width: inherit;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: white;
+        }
+
+        .single-data {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .data-title {
+            color: var(--dark-desaturated-blue);
+            font-size: 1.25rem;
+            font-family: 'Kumbh Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .data-subtitle {
+            font-size: 0.75rem;
+            font-family: 'Kumbh Sans', sans-serif;
+            color: var(--dark-gray);
+            font-weight: 400;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="profile-container">
+            <img class="card-background" src="images/bg-pattern-card.svg" alt="background">
+            <img class="pic-profile" src="images/image-victor.jpg" alt="potrait">
+        </div>
+        <div class="details">
+            <div class="name">Victor Crest <span class="age">26</span></div>
+            <div class="country">London</div>
+        </div>
+        <div class="data-container">
+            <div class="single-data">
+                <div class="data-title">80K</div>
+                <div class="data-subtitle">Followers</div>
+            </div>
+            <div class="single-data">
+                <div class="data-title">803K</div>
+                <div class="data-subtitle">Likes</div>
+            </div>
+            <div class="single-data">
+                <div class="data-title">1.4K</div>
+                <div class="data-subtitle">Photos</div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
