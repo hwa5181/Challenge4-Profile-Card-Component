@@ -30,22 +30,22 @@
         }
 
         main {
-            width: calc(350/16*1rem);
+            width: 100vw;
+            max-width: calc(350/16*1rem);
             min-height: 100vh;
             margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;            
         }
 
         .profile-container {
             display: flex;
+            flex-direction: column;
             position: relative;
         }
 
         .card-background {
-            width: inherit;
             border-radius: 0.75rem 0.75rem 0 0;
         }
 
@@ -59,7 +59,6 @@
         }
 
         .details {
-            width: inherit;
             background-color: white;
             display: flex;
             flex-direction: column;
@@ -88,7 +87,6 @@
         }
 
         .data-container {
-            width: inherit;
             padding: 1.25rem;
             display: flex;
             justify-content: space-evenly;
